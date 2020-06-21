@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+        <ion-menu-button *ngIf="!toggleSearchBar" autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end" >
+          <ion-icon *ngIf="!toggleSearchBar" style="font-size: 25px; padding-right: 20px;" name="search" (click)="toggleBar()"></ion-icon>
+          <ion-icon *ngIf="toggleSearchBar" style="font-size: 25px; padding-right: 20px;" name="close" (click)="toggleBar()"></ion-icon>
+      </ion-buttons>
+      <ion-searchbar class="searchbar"
+        *ngIf="toggleSearchBar"
+        [(ngModel)]="searchQuery"
+        [showCancelButton]="false">
+    </ion-searchbar>
+    <ion-title *ngIf="!toggleSearchBar">Pokédex</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher slot="fixed" 
+    (ionRefresh)="ionRefresh($event)" 
+    (ionPull)="ionPull($event)" 
+    (ionStart)="ionStart($event)">
+      <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="Pull to refresh"
+        refreshingSpinner="crescent">
+      </ion-refresher-content>
+    </ion-refresher>
+  <ion-list *ngIf='pokemons?.results'>
+    <ion-item lines="none" button *ngFor="let pokemon of getPokemons(); let i = index" [routerLink]="['/','pokemon',pokemonId[i]]" routerDirection="forward">
+      <div class="poke">
+        <ion-avatar slot="start">
+          <ion-img *ngIf=sprite[i] class="poke-img" [src]='sprite[i]'></ion-img>
+        </ion-avatar>
+          <h1 class="poke-name">{{ pokemon | titlecase }}</h1>
+          <p class="poke-id">#{{ pokemonId[i] }}</p>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="!pokemons?.results">
+    <div class="ion-padding custom-skeleton">
+      <ion-list *ngFor="let x of [1,2,3]">
+        <ion-item lines="none">
+          <ion-card style="width:100%">              
+            <ion-card-header>
+              <h2><ion-skeleton-text animated style="width: 100px;"></ion-skeleton-text></h2>                    
+              <ion-thumbnail>
+                <ion-skeleton-text animated></ion-skeleton-text>
+              </ion-thumbnail>
+            </ion-card-header>  
+          </ion-card>            
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+
+</ion-content>

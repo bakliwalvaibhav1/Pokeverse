@@ -1,0 +1,22 @@
+<ion-app>
+  <ion-menu contentId="content" side="start" id="menu">
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-menu-toggle>
+          <ion-card class="menu-card" [routerLink]="['/pokedex']" routerLinkActive="router-link-active" >
+            <ion-icon class="menu-icon" name="tablet-portrait"></ion-icon>
+            <p>Pokédex</p>
+          </ion-card>
+          <ion-card class="menu-card" [routerLink]="['/guessthepokemon']" routerLinkActive="router-link-active" >
+            <ion-icon class="menu-icon" name="help-circle"></ion-icon>
+            <p>Guess the Pokémon</p>
+          </ion-card>
+        </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet> 
+</ion-app>

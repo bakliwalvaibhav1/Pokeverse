@@ -1,0 +1,49 @@
+/* Custom Skeleton Line Height and Margin */
+
+.custom-skeleton ion-skeleton-text {
+    line-height: 13px;
+  }
+  
+  .custom-skeleton ion-skeleton-text:last-child {
+    margin-bottom: 5px;
+  }
+  
+.poke{
+  width: 100%;
+  border: 5px red solid;
+  border-radius: 10px;
+  margin-top: 5px;
+  background: white;
+}
+
+.poke ion-avatar{
+  float: left;
+}
+
+ion-content{
+  --ion-background-color:#111D12;
+}
+
+.spinner-light{
+  color: red;
+  display: block;
+  margin: auto;
+}
+
+.poke-name{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 0px;
+  float: left;
+}
+
+.poke-id{
+  float: right;
+  padding-right: 10px;
+}
+
+.searchbar{
+  color: red;
+  padding-left: 20px;
+  padding-right: 20px;
+}

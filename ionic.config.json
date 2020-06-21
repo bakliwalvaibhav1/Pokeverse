@@ -1,0 +1,7 @@
+{
+  "name": "pokeverse",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

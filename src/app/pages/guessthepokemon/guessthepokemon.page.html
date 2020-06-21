@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+    <ion-title>Guess the Pokémon</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <img class="card-img" src='{{pokemonImg}}'>
+  </ion-card>
+
+
+  <ion-list *ngIf=pokemonImg>
+      <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <ion-card class="card-inner op-0" (click)="checkAnswer(answers[answerPosition[0]-1], 0)" [style.backgroundColor]="color0">
+                {{ answers[answerPosition[0]-1] }}
+              </ion-card>
+            </ion-col>
+            <ion-col size="6">
+              <ion-card class="card-inner op-1" (click)="checkAnswer(answers[answerPosition[1]-1], 1)" [style.backgroundColor]="color1">
+                {{ answers[answerPosition[1]-1] }}
+              </ion-card>
+            </ion-col>
+            <ion-col size="6">
+                <ion-card class="card-inner op-2" (click)="checkAnswer(answers[answerPosition[2]-1], 2)" [style.backgroundColor]="color2">
+                  {{ answers[answerPosition[2]-1] }}
+                </ion-card>
+            </ion-col>
+            <ion-col size="6">
+                <ion-card class="card-inner op-3" (click)="checkAnswer(answers[answerPosition[3]-1], 3)" [style.backgroundColor]="color3">
+                  {{ answers[answerPosition[3]-1] }}
+                </ion-card>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+
+    <!-- <ion-item class="options-item" *ngFor="let i of answerPosition"> -->
+        
+    <!-- </ion-item> -->
+  </ion-list>
+
+
+
+</ion-content>

@@ -1,0 +1,94 @@
+ion-content{
+    --ion-background-color:#111D12;
+}
+
+
+.main-img{
+  background-color: white;
+  height: 340px;
+}
+
+.card-img{
+  background-color: white;
+}
+
+.poke-img{
+  border: 5px block white;
+}
+
+.card-outer{
+  border: 5px red solid;
+  border-radius: 30px;
+  background: white;
+}
+
+.heading{
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  margin: 5px 5px;
+  border-bottom: 5px red solid;
+  font-weight: bold;
+}
+
+.desc{
+  margin: 10px;
+  color: black;
+  font-size: 20px;
+}
+
+.card-inner{
+  .heading{
+    color: black;
+    font-size: 20px; 
+    text-align: center;
+    border-bottom: none;
+  }
+  width: 100%;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  border: 2px black solid;
+  margin: 0;
+  p{
+    margin: 0;
+  }
+}
+
+.arrow{
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.evolImg{
+  height: 50px;
+  width: 50px;
+  float: left;
+}
+
+.evol{
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 12px;
+  float: left;
+}
+
+.lev{
+  float: right;
+  padding-right: 5px;
+}
+
+.stat{
+  float: right;
+  padding-right: 5px;
+  font-weight: bold;
+}
+
+.stat-name{
+  float: left;
+  padding-left: 5px;
+}
+

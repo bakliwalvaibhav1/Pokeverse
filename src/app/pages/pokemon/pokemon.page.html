@@ -1,0 +1,126 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="pokedex"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ pokeName | titlecase }} #{{ pokemonId }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card>
+  <img class="main-img" src='{{frontDefault}}'>
+</ion-card>
+
+  
+<!-- <div scrollX="true" direction="x">
+    <ion-list>
+      <ion-item lines="none" button >
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <ion-slides [options]="sliderConfig"> 
+                  <ion-slide *ngFor="let img of sprites" loadingSpinner="bubbles">
+                    <div class="swiper-slide">
+                        <ion-card class="card-img">
+                          <img src='{{img[1]}}'>
+                        </ion-card>
+                    </div>
+                  </ion-slide>
+              </ion-slides>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>  
+      </ion-item>
+    </ion-list>
+  </div> -->
+
+<!-- Description -->
+  <ion-card class="card-outer">
+    <p class="heading">Description</p>
+    <p class="desc">{{ description }}</p>
+  </ion-card>
+
+<!-- Basic Details -->
+  <ion-card class="card-outer">
+      <p class="heading">Basic Details</p>
+      <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <ion-card class="card-inner">
+                <p class="heading">Type</p>
+                <p><span *ngFor="let type of types; let isLast=last">{{ type | titlecase }}{{isLast ? '' : ', '}}</span>
+                </p>
+              </ion-card>
+            </ion-col>
+            <ion-col size="6">
+              <ion-card class="card-inner">
+                <p class="heading">Height</p>
+                <p>{{ height }} m</p>
+              </ion-card>
+            </ion-col>
+            <ion-col size="6">
+              <ion-card class="card-inner">
+                <p class="heading">Weight</p>
+                <p>{{ weight }} kg</p>
+              </ion-card>
+            </ion-col>
+            <ion-col size="6">
+              <ion-card class="card-inner">
+                <p class="heading">Category</p>
+                <p>{{ category }}</p>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  </ion-card>
+  
+<!-- Abilities -->
+  <ion-card class="card-outer">
+    <p class="heading">Abilities</p>
+    <ion-grid>
+      <ion-row *ngFor="let ability of abilities; let i = index">
+        <ion-col size="12">
+          <ion-card class="card-inner">
+            <p class="heading">{{ ability | titlecase }}</p>
+            <p>{{ abilitiesDesc[i] }}</p>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+<!-- Evolutions -->
+  <ion-card class="card-outer">
+      <p class="heading">Evolutions</p>
+      <ion-grid>
+        <ion-row *ngFor="let evolution of evolutions; let isLast=last; let i = index">
+          <ion-col size="12">
+            <ion-card class="card-inner">
+              <ion-img class="evolImg" src='{{evolveImg[i]}}'></ion-img>
+              <p class="evol">{{ evolution | titlecase }}</p>
+              <p *ngIf=evoLevels[i] class="evol lev">Level : {{ evoLevels[i] }}</p>
+              
+            </ion-card>
+            <div *ngIf=!isLast class="arrow"><ion-icon class="arrow" name="arrow-down"></ion-icon></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-card>
+
+<!-- Statistics -->
+  <ion-card class="card-outer">
+    <p class="heading">Statistics</p>
+    <ion-grid>
+      <ion-row *ngFor="let statistic of statistics; let i = index">
+        <ion-col size="12">
+          <ion-card class="card-inner">
+            <p class="stat">{{ statistic.base_stat }}</p>
+            <p class="heading stat-name">{{ statistic.stat.name | titlecase }}</p>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+      
+</ion-content>
