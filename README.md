@@ -23,9 +23,9 @@ This will open the application in your browser. The default path will be http://
 
 ### Screenshots
 <div>
-  <img style="float: left" src="Screenshots/SS1.png" width="300">
-  <img style="float: left" src="Screenshots/SS2.png" width="300">
-  <img style="float: left" src="Screenshots/SS3.png" width="300">
-  <img style="float: left" src="Screenshots/SS4.png" width="300">
-  <img style="float: left" src="Screenshots/SS5.png" width="300">
+  <img style="float: left" src="Screenshots/SS1.png" width="175">
+  <img style="float: left" src="Screenshots/SS2.png" width="175">
+  <img style="float: left" src="Screenshots/SS3.png" width="175">
+  <img style="float: left" src="Screenshots/SS4.png" width="175">
+  <img style="float: left" src="Screenshots/SS5.png" width="175">
 </div>
