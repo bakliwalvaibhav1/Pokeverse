@@ -3,12 +3,6 @@
 ### API used
 [PokéAPI](https://pokeapi.co/)
 
-### APK File
-Here's the link to download the apk file. [Pokéverse](https://drive.google.com/file/d/1yOFV8bxJZ5vY498LM2NVYRiFVLTOmFmP/view?usp=sharing)
-
-### Screenshots
-[](https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg)
-
 ### Installation
 Clone/Download the project and install the dependencies using npm install
 ```sh
@@ -29,3 +23,6 @@ This will open the application in your browser. The default path will be http://
   <img style="float: left" src="Screenshots/SS4.png" width="175">
   <img style="float: left" src="Screenshots/SS5.png" width="175">
 </div>
+
+### APK File
+Here's the link to download the apk file. [Pokéverse](https://drive.google.com/file/d/1yOFV8bxJZ5vY498LM2NVYRiFVLTOmFmP/view?usp=sharing)
